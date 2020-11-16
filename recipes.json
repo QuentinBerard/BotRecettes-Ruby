@@ -1,0 +1,78 @@
+[
+  {
+    "recipe_id": 1,
+    "recipe_type": "Dessert",
+    "recipe_name": "Gateau au chocolat",
+    "ingredients": {
+      "Beurre salé": "200 g",
+      "Chocolat": "200 g",
+      "Oeuf": "4",
+      "Sucre": "150 g",
+      "Farine": "80 g"
+    },
+    "allergens": [],
+    "diet": ["végétarien"],
+    "steps": [
+      "Faire fondre le beurre avec le chocolat.",
+      "Battre les oeufs avec le sucre.",
+      "Ajouter la farine aux oeufs et au sucre.",
+      "Mélanger le beurre / chocolat avec les oeufs/sucre/farine jusqu'à obtenier une pate homogène.",
+      "Beurrer et fariner un moule à gateau",
+      "Verser le mélange dans le moule et mettre au four à 190 degrés pendant 15 à 20 minutes."
+    ],
+    "related_recipes":[
+      2
+    ]
+  },
+  {
+    "recipe_id":2,
+    "recipe_type": "Dessert",
+    "recipe_name":"Crème anglaise",
+    "ingredients":{
+      "Lait demi écrémé": "50 cl",
+      "Jaune d'oeuf": "4",
+      "Sucre": "50 g",
+      "Gousse de vanille": "1",
+      "Maïzena": "1 cuillère à soupe"
+    },
+    "allergens": [],
+    "diet": ["végétarien"],
+    "steps": [
+      "Porter à ébullition le lait en ayant pris soin d'y plonger la gousse de vanille fendue en deux dans sa longueur.",
+      "Laisser ensuite infuser pendant 10 min, puis retirer la gousse de vanille, et récupérer les grains en la grattant. Délayer ceux-ci dans le lait.",
+      "Dans une seconde casserole, fouetter activement les jaunes d'oeuf et le sucre afin que le mélange blanchisse.",
+      "Incorporer ensuite petit à petit le lait et rendre l'appareil bien homogène avec le fouet.",
+      "Ajouter ensuite la maïzena et réchauffer le mélange à feu moyen.",
+      "Sans cesser de remuer, guetter le moment où la crème s'épaissit. Ne pas laisser boullir.",
+      "Quand la crème s'épaissit, retirer du feu et fouetter activement.",
+      "Réserver dans un bol au frigo.",
+      "Mélanger la crème avant de la servir."
+    ],
+    "related_recipes":[
+      1
+    ]
+  },
+  {
+    "recipe_id":3,
+    "recipe_type": "Plat",
+    "recipe_name": "Galettes de sarrasin nature",
+    "ingredients": {
+      "Farine de sarrasin": "300 g",
+      "Eau": "50 cl",
+      "Sel fin": "2 pincées",
+      "Huile pour cuisson": "10 cl"
+    },
+    "allergens": [],
+    "diet": ["végétarien", "végane"],
+    "steps": [
+      "Verser toute la farine et le sel dans un saladier",
+      "Ajouter de l'eau progressivement et battre au fouet ou au batteur jusqu'à obtenir une pâte pas trop liquide (pas obligé de mettre toute l'eau)",
+      "Faire chauffer une poêle à crêpes à grand feu, étaler un peu d'huile sur toute la surface avec du papier cuisine",
+      "Une fois la poêle bien chaude, verser environ une louche de pâte et la répartir sur toute la surface de la poêle",
+      "Laisser cuire sans retourner jusqu'à ce que les bords se décollent d'eux-mêmes",
+      "Sortir la galette et la mettre de côté dans une assiette",
+      "Recommencer la cuisson tant qu'il reste de la pâte : voilà une pile de galettes à réchauffer avec un remplissage au choix"
+    ],
+    "related_recipes": []
+  }
+]

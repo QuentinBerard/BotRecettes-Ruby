@@ -1,4 +1,5 @@
 require 'json'
+require 'pp'
 
 json = File.read('recipes.json')
 object = JSON.parse(json)
@@ -34,8 +35,8 @@ choix = gets.chomp.capitalize
 object.each do |recette|
   if recette["recipe_name"].include?choix
     puts "C'est parti ! Tu auras besoin de :"
-    recette["ingredients"].each do |quantite|
-      puts quantite.key
+    recette["ingredients"].each do |key, value|
+      puts value.to_s + " de " + key.to_s
     end
     #print recette["ingredients"].split(",")
   end

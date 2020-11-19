@@ -1,28 +1,60 @@
 require 'json'
-json = File.read('recipes.json')
-object = JSON.parse(json)
+require 'pp'
+require 'open-uri'
+#@ rb_sysopen
+json = JSON.load(URI.open("https://raw.githubusercontent.com/adatechschool/Projets/master/robot_de_conversation/recipes.json"))
+#json = File.read("recipes.json")
+#object = JSON.parse(json)
+
+
+
 puts "Comment tu t'appelles ?"
-name = gets.chomp
+name = gets.chomp.capitalize
 puts "Salut a toi #{name}"
 count = 0
 #puts object[1]["recipe_name"]
+
+
 while count == 0 do
-  puts "Quels sont tes ingredients, #{name} ?"
-  ingredient_frigo = gets.chomp.capitalize
-  object.each do |recette|
-    if recette["ingredients"].include?ingredient_frigo
-      count += 1
-      if count==1
-        puts "Et si on cuisinait un "+recette["recipe_name"]+" ?"
-      end
-      if count>1
+  puts "Quels sont tes ingredients, #{name} ? Mets des virgules entre chaque ingredient !"
+  ingredient_frigo = gets.chomp.split(",").map(&:capitalize)
+  #ingredient_frigo = ingredient_frigo.map(&:capitalize)
+  puts ingredient_frigo
+
+    json.each do |recette|
+      ingredient_frigo.each do |ingredient|
+      if recette["ingredients"].include?ingredient
+        count += 1
+        if count==1
+          puts "Et si on cuisinait un "+recette["recipe_name"]+" ?"
+        end
+        if count>1
         puts "ou alors un "+recette["recipe_name"]+" ?"
-        puts "Quelle recette tu préfères ?"
-        #reponse_recette = gets.chomp.capitalize
+        end
       end
+    end
+
+    if count == 0
+      puts "Déso, essayes un autre ingredient mon ptit pote !"
     end
   end
   if count == 0
       puts "Déso, essayes un autre ingredient mon ptit pote !"
+  end
+end
+
+puts "Alors #{name}, que souhaites-tu cuisiner ?"
+choix = gets.chomp.capitalize
+json.each do |recette|
+  if recette["recipe_name"].include?choix
+    puts "C'est parti ! Tu auras besoin de :"
+    recette["ingredients"].each do |key, value|
+      puts value.to_s + " de " + key.to_s
+    end
+    puts "Voilà les étapes à suivre : "
+    recette["steps"].each do |value|
+      puts value
+    end
+    #print recette["ingredients"].split(",")
   end
 end

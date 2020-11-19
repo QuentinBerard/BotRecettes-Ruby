@@ -74,5 +74,30 @@
       "Recommencer la cuisson tant qu'il reste de la pâte : voilà une pile de galettes à réchauffer avec un remplissage au choix"
     ],
     "related_recipes": []
+  },
+  {
+    "recipe_id": 4,
+    "recipe_type": "Dessert",
+    "recipe_name": "Gateau au yaourt",
+    "ingredients": {
+      "Beurre salé": "200 g",
+      "Yaourt": "200 g",
+      "Oeuf": "4",
+      "Sucre": "150 g",
+      "Farine": "80 g"
+    },
+    "allergens": [],
+    "diet": ["végétarien"],
+    "steps": [
+      "Faire fondre le beurre.",
+      "Battre les oeufs avec le sucre et le yaourt.",
+      "Ajouter la farine aux oeufs et au sucre.",
+      "Mélanger le beurre avec les oeufs/sucre/farine jusqu'à obtenier une pate homogène.",
+      "Beurrer et fariner un moule à gateau",
+      "Verser le mélange dans le moule et mettre au four à 190 degrés pendant 15 à 20 minutes."
+    ],
+    "related_recipes":[
+      []
+    ]
   }
 ]

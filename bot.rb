@@ -7,13 +7,23 @@ json = JSON.load(URI.open("https://raw.githubusercontent.com/adatechschool/Proje
 #object = JSON.parse(json)
 
 
-
 puts "Comment tu t'appelles ?"
 name = gets.chomp.capitalize
 puts "Salut a toi #{name}"
 count = 0
 #puts object[1]["recipe_name"]
 
+tabRecettes= []
+nomRecettes =[]
+
+def trouve_recette(json,num_recette,nomRecettes)
+  json.each do |recette|
+    if num_recette == recette["recipe_id"]
+      nomRecettes.push(recette["recipe_name"])
+      return nomRecettes
+    end
+  end
+end
 
 while count == 0 do
   puts "Quels sont tes ingredients, #{name} ? Mets des virgules entre chaque ingredient !"
@@ -25,23 +35,33 @@ while count == 0 do
       ingredient_frigo.each do |ingredient|
       if recette["ingredients"].include?ingredient
         count += 1
-        if count==1
-          puts "Et si on cuisinait un "+recette["recipe_name"]+" ?"
-        end
-        if count>1
-        puts "ou alors un "+recette["recipe_name"]+" ?"
-        end
+        tabRecettes.push(recette["recipe_id"])
       end
     end
-
     if count == 0
       puts "Déso, essayes un autre ingredient mon ptit pote !"
     end
   end
-  if count == 0
-      puts "Déso, essayes un autre ingredient mon ptit pote !"
+end
+
+tabRecettes.uniq!
+tabRecettes.each do |num_recette|
+    trouve_recette(json,num_recette,nomRecettes)
+end
+
+print nomRecettes
+if nomRecettes.length >= 1
+  puts "Et si on cuisinait un "+nomRecettes[0]+" ?"
+end
+i = 0
+until i==nomRecettes.length-1
+  if nomRecettes.length > 1
+    i= i+1
+    puts "ou alors un "+nomRecettes[i]+" ?"
   end
 end
+
+
 
 puts "Alors #{name}, que souhaites-tu cuisiner ?"
 choix = gets.chomp.capitalize

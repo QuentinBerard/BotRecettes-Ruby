@@ -31,8 +31,8 @@ while count == 0 do
   #ingredient_frigo = ingredient_frigo.map(&:capitalize)
   puts ingredient_frigo
 
-    json.each do |recette|
-      ingredient_frigo.each do |ingredient|
+  json.each do |recette|
+    ingredient_frigo.each do |ingredient|
       if recette["ingredients"].include?ingredient
         count += 1
         tabRecettes.push(recette["recipe_id"])
@@ -46,10 +46,9 @@ end
 
 tabRecettes.uniq!
 tabRecettes.each do |num_recette|
-    trouve_recette(json,num_recette,nomRecettes)
+  trouve_recette(json,num_recette,nomRecettes)
 end
 
-print nomRecettes
 if nomRecettes.length >= 1
   puts "Et si on cuisinait un "+nomRecettes[0]+" ?"
 end

@@ -6,6 +6,8 @@ json = JSON.load(URI.open("https://raw.githubusercontent.com/adatechschool/Proje
 #json = File.read("recipes.json")
 #object = JSON.parse(json)
 
+
+
 puts "Comment tu t'appelles ?"
 name = gets.chomp.capitalize
 puts "Salut a toi #{name}"
@@ -15,9 +17,12 @@ count = 0
 
 while count == 0 do
   puts "Quels sont tes ingredients, #{name} ? Mets des virgules entre chaque ingredient !"
-  ingredient_frigo = gets.chomp.capitalize.split(",")
-  ingredient_frigo.each do |ingredient|
+  ingredient_frigo = gets.chomp.split(",").map(&:capitalize)
+  #ingredient_frigo = ingredient_frigo.map(&:capitalize)
+  puts ingredient_frigo
+
     json.each do |recette|
+      ingredient_frigo.each do |ingredient|
       if recette["ingredients"].include?ingredient
         count += 1
         if count==1

@@ -2,7 +2,7 @@ require 'json'
 require 'pp'
 require 'open-uri'
 #@ rb_sysopen
-json = JSON.load(URI.open("https://raw.githubusercontent.com/adatechschool/Projets/master/robot_de_conversation/recipes.json"))
+json = JSON.load(URI.open("https://raw.githubusercontent.com/QuentinBerard/BotRecettes-Ruby/main/recipes.json"))
 #json = File.read("recipes.json")
 #object = JSON.parse(json)
 
@@ -29,7 +29,6 @@ while count == 0 do
   puts "Quels sont tes ingredients, #{name} ? Mets des virgules entre chaque ingredient !"
   ingredient_frigo = gets.chomp.split(",").map(&:capitalize)
   #ingredient_frigo = ingredient_frigo.map(&:capitalize)
-  puts ingredient_frigo
 
   json.each do |recette|
     ingredient_frigo.each do |ingredient|

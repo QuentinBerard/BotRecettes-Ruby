@@ -28,9 +28,7 @@ end
 while count == 0 do
   puts "Quels sont tes ingredients, #{name} ? Mets des virgules entre chaque ingredient !"
   ingredient_frigo = gets.chomp.split(",").map(&:strip).map(&:capitalize)
-  #ingredient_frigo = ingredient_frigo.map(&:capitalize)
 
-  print(ingredient_frigo)
   json.each do |recette|
     ingredient_frigo.each do |ingredient|
       if recette["ingredients"].include?ingredient
@@ -44,7 +42,6 @@ while count == 0 do
   end
 end
 
-print(tabRecettes)
 tabRecettes.uniq!
 tabRecettes.each do |num_recette|
   trouve_recette(json,num_recette,nomRecettes)

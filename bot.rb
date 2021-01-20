@@ -1,17 +1,17 @@
 require 'json'
 require 'pp'
 require 'open-uri'
+
 #@ rb_sysopen
 json = JSON.load(URI.open("https://raw.githubusercontent.com/QuentinBerard/BotRecettes-Ruby/main/recipes.json"))
 #json = File.read("recipes.json")
 #object = JSON.parse(json)
 
-
 puts "Comment tu t'appelles ?"
 name = gets.chomp.capitalize
 puts "Salut a toi #{name}"
 count = 0
-#puts object[1]["recipe_name"]
+
 
 tabRecettes= []
 nomRecettes =[]
@@ -48,7 +48,7 @@ tabRecettes.each do |num_recette|
 end
 
 if nomRecettes.length >= 1
-  puts "Et si on cuisinait un(e) "+nomRecettes[0]+" ?"
+  puts "\nEt si on cuisinait un(e) "+nomRecettes[0]+" ?"
 end
 i = 0
 until i==nomRecettes.length-1
@@ -59,19 +59,34 @@ until i==nomRecettes.length-1
 end
 
 
-
-puts "Alors #{name}, que souhaites-tu cuisiner ?"
-choix = gets.chomp.capitalize
-json.each do |recette|
-  if recette["recipe_name"].include?choix
-    puts "C'est parti ! Tu auras besoin de :"
-    recette["ingredients"].each do |key, value|
-      puts value.to_s + " de " + key.to_s
+nombreRecettePossible=0
+uniqueMatch=0
+while uniqueMatch==0 do
+  puts "\nAlors #{name}, quelle recette souhaites-tu cuisiner ?"
+  nombreRecettePossible=0
+  choix = gets.chomp.capitalize
+  json.each do |recette|
+    if (recette["recipe_name"].include?choix) && (nombreRecettePossible>0) && (recette["recipe_name"]!=choix) && (nomRecettes.include?(recette["recipe_name"]))
+      nombreRecettePossible+=1
+      puts "ou "+recette["recipe_name"]+"?"
     end
-    puts "Voilà les étapes à suivre : "
-    recette["steps"].each do |value|
-      puts value
+    if (recette["recipe_name"].include?choix) && (nombreRecettePossible==0) && (recette["recipe_name"]!=choix) && (nomRecettes.include?(recette["recipe_name"]))
+      nombreRecettePossible+=1
+      puts "\nTu veux dire "+recette["recipe_name"]+"?"
     end
-    #print recette["ingredients"].split(",")
+    if (recette["recipe_name"]==choix) && (nomRecettes.include?(recette["recipe_name"]))
+      uniqueMatch+=1
+      puts "\nC'est parti ! Tu auras besoin de :"
+      recette["ingredients"].each do |key, value|
+        puts value.to_s + " de " + key.to_s
+      end
+      puts "\nVoilà les étapes à suivre : "
+      recette["steps"].each do |value|
+        puts value
+      end
+    end
+  end
+  if nombreRecettePossible==0
+    puts "Je n'ai pas cette recette dsl"
   end
 end

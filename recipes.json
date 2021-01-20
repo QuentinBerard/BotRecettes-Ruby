@@ -75,26 +75,45 @@
     ],
     "related_recipes": []
   },
+  
   {
-    "recipe_id": 4,
+    "recipe_id": 5,
     "recipe_type": "Dessert",
-    "recipe_name": "Gateau au yaourt",
+    "recipe_name": "Gateau à la carotte",
     "ingredients": {
+      "Carotte râpées": "250 g",
+      "Huile de tournesol": "150 g",
+      "Raisins secs":"60g",
       "Beurre salé": "200 g",
       "Yaourt": "200 g",
-      "Oeuf": "4",
-      "Sucre": "150 g",
-      "Farine": "80 g"
+      "Oeuf":"3",
+      "Noisette": "60g",
+      "Sucre de canne non raffiné": "75 g",
+      "Sucre de canne blond":"100 g",
+      "Farine": "200 g",
+      "Gingembre":"2 cs",
+      "Levure chimique":"2 cs",
+      "Canelle":"1 cs",
+      "Sel":"0.5 cs",
+      "Cream cheese Philadelphia":"250 g",
+      "Sucre glace": "50g",
+      "Beurre":"50g"
     },
     "allergens": [],
     "diet": ["végétarien"],
     "steps": [
-      "Faire fondre le beurre.",
-      "Battre les oeufs avec le sucre et le yaourt.",
-      "Ajouter la farine aux oeufs et au sucre.",
-      "Mélanger le beurre avec les oeufs/sucre/farine jusqu'à obtenier une pate homogène.",
-      "Beurrer et fariner un moule à gateau",
-      "Verser le mélange dans le moule et mettre au four à 190 degrés pendant 15 à 20 minutes."
+      "Concassez grossièrement les noisettes.",
+      "Cassez les œufs dans un grand bol.",
+      "Ajoutez le sucre de canne non raffiné.",
+      "Ajoutez le sucre de canne blond et fouettez.",
+      "Ajoutez l'huile et fouettez.",
+      "Ajoutez la farine et la levure.",
+      "Ajoutez les épices, le sel et mélangez.",
+      "Ajoutez les carottes rapées et les raisins secs.",
+      "Ajoutez les 3/4 des noisettes et melangez.",
+      "Versez dans un moule à cake huilé, lissez la surface et enfournez dans un four préchauffé à 165°C pendant une quarantaine de minutes. Une lame insérée au centre du cake doit ressortir propre. Attendez 5 minutes puis démoulez sur une grille. Laissez refroidir.",
+      "Mélangez le beurre mou et la Philadelphia. Ajoutez le sucre et melangez.",
+      "Quand le cake est bien refroidi, étalez le glaçage avec une petite spatule."
     ],
     "related_recipes":[
       []

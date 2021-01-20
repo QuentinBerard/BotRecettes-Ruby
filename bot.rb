@@ -38,11 +38,12 @@ while count == 0 do
         tabRecettes.push(recette["recipe_id"])
       end
     end
-    if count == 0
-      puts "Déso, essayes un autre ingredient mon ptit pote !"
-    end
+  end
+  if tabRecettes.length == 0
+    puts "Déso, essayes un autre ingredient mon ptit pote !"
   end
 end
+
 
 tabRecettes.uniq!
 tabRecettes.each do |num_recette|

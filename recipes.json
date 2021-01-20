@@ -97,11 +97,8 @@
       "Verser le mélange dans le moule et mettre au four à 190 degrés pendant 15 à 20 minutes."
     ],
     "related_recipes":[
-      
     ]
   },
-
-
   {
     "recipe_id": 5,
     "recipe_type": "Dessert",
@@ -127,7 +124,6 @@
     "allergens": [],
     "diet": ["végétarien"],
     "steps": [
-
       "Concassez grossièrement les noisettes.",
       "Cassez les œufs dans un grand bol.",
       "Ajoutez le sucre de canne non raffiné.",
@@ -141,11 +137,8 @@
       "Mélangez le beurre mou et la Philadelphia. Ajoutez le sucre et melangez.",
       "Quand le cake est bien refroidi, étalez le glaçage avec une petite spatule."
     ],
-    "related_recipes":[
-      
-    ]
+    "related_recipes":[]
   },
-
     {
     "recipe_id": 6,
     "recipe_type": "Dessert",
@@ -170,9 +163,30 @@
       "Recouvrir d'une couche de crème au mascarpone puis répéter l'opération en alternant couche de biscuits et couche de crème en terminant par cette dernière.",
       "Saupoudrer de cacao.",
       "Mettre au réfrigérateur 6 heures minimum puis déguster frais."
-
     ],
-    "related_recipes":[
-    ]
+    "related_recipes":[]
+  }
+  {
+    "recipe_id": 7,
+    "recipe_type": "Entrée",
+    "recipe_name": "Houmous",
+    "ingredients": {
+      "Pois chiche": "300 g",
+      "Citron": "1/2",
+      "Sel": "1 càc",
+      "Ail": "2 gousses",
+      "Tahin": "3 càc",
+      "Huile d'olive": "1 càs",
+      "Huile de sésame": "1 càs",
+      "Cumin": "1 càs"
+    },
+    "allergens": [],
+    "diet": ["végétarien"],
+    "steps": [
+      "Mettre les pois chiches égouttés dans un mixeur. Mixer légèrement en ajoutant un peu d'eau de cuisson.",
+      "Ajouter le tahin, le jus de citron, l'ail, le cumin et le sel, et continuer de mixer en incorporant l'huile d'olive petit à petit jusqu'à obtenir une texture homogène et crémeuse.",
+      "On peut éventuellement couvrir l'houmous d'huile de sésame et de cumin."
+    ],
+    "related_recipes":[]
   }
 ]

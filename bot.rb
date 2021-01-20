@@ -76,6 +76,7 @@ while uniqueMatch==0 do
     end
     if (recette["recipe_name"]==choix) && (nomRecettes.include?(recette["recipe_name"]))
       uniqueMatch+=1
+      nombreRecettePossible+=1
       puts "\nC'est parti ! Tu auras besoin de :"
       recette["ingredients"].each do |key, value|
         puts value.to_s + " de " + key.to_s

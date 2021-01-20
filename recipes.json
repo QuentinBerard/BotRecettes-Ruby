@@ -75,48 +75,58 @@
     ],
     "related_recipes": []
   },
-  
   {
-    "recipe_id": 5,
+    "recipe_id": 4,
     "recipe_type": "Dessert",
-    "recipe_name": "Gateau à la carotte",
+    "recipe_name": "Gateau au yaourt",
     "ingredients": {
-      "Carotte râpées": "250 g",
-      "Huile de tournesol": "150 g",
-      "Raisins secs":"60g",
       "Beurre salé": "200 g",
       "Yaourt": "200 g",
-      "Oeuf":"3",
-      "Noisette": "60g",
-      "Sucre de canne non raffiné": "75 g",
-      "Sucre de canne blond":"100 g",
-      "Farine": "200 g",
-      "Gingembre":"2 cs",
-      "Levure chimique":"2 cs",
-      "Canelle":"1 cs",
-      "Sel":"0.5 cs",
-      "Cream cheese Philadelphia":"250 g",
-      "Sucre glace": "50g",
-      "Beurre":"50g"
+      "Oeuf": "4",
+      "Sucre": "150 g",
+      "Farine": "80 g"
     },
     "allergens": [],
     "diet": ["végétarien"],
     "steps": [
-      "Concassez grossièrement les noisettes.",
-      "Cassez les œufs dans un grand bol.",
-      "Ajoutez le sucre de canne non raffiné.",
-      "Ajoutez le sucre de canne blond et fouettez.",
-      "Ajoutez l'huile et fouettez.",
-      "Ajoutez la farine et la levure.",
-      "Ajoutez les épices, le sel et mélangez.",
-      "Ajoutez les carottes rapées et les raisins secs.",
-      "Ajoutez les 3/4 des noisettes et melangez.",
-      "Versez dans un moule à cake huilé, lissez la surface et enfournez dans un four préchauffé à 165°C pendant une quarantaine de minutes. Une lame insérée au centre du cake doit ressortir propre. Attendez 5 minutes puis démoulez sur une grille. Laissez refroidir.",
-      "Mélangez le beurre mou et la Philadelphia. Ajoutez le sucre et melangez.",
-      "Quand le cake est bien refroidi, étalez le glaçage avec une petite spatule."
+      "Faire fondre le beurre.",
+      "Battre les oeufs avec le sucre et le yaourt.",
+      "Ajouter la farine aux oeufs et au sucre.",
+      "Mélanger le beurre avec les oeufs/sucre/farine jusqu'à obtenier une pate homogène.",
+      "Beurrer et fariner un moule à gateau",
+      "Verser le mélange dans le moule et mettre au four à 190 degrés pendant 15 à 20 minutes."
     ],
     "related_recipes":[
       []
+    ]
+  },
+    {
+    "recipe_id": 6,
+    "recipe_type": "Dessert",
+    "recipe_name": "Tiramisù",
+    "ingredients": {
+      "Mascarpone": "400 g",
+      "Cacao en poudre": "50 g",
+      "Oeuf": "5",
+      "Sucre": "150 g",
+      "Biscuits cuillières":"36",
+      "Sucre Vanillé":"1 sachet",
+      "Café":"100g"
+    },
+    "allergens": [],
+    "diet": ["végétarien"],
+    "steps": [
+      "Séparer les blancs des jaunes d'oeufs.",
+      "Mélanger les jaunes avec le sucre et le sucre vanillé.",
+      "Ajouter le mascarpone au fouet.",
+      "Monter les blancs en neige et les incorporer délicatement à la spatule au mélange précédent. Réserver.",
+      "Mouiller les biscuits dans le café rapidement avant d'en tapisser le fond du plat",
+      "Recouvrir d'une couche de crème au mascarpone puis répéter l'opération en alternant couche de biscuits et couche de crème en terminant par cette dernière.",
+      "Saupoudrer de cacao.",
+      "Mettre au réfrigérateur 6 heures minimum puis déguster frais."
+
+    ],
+    "related_recipes":[
     ]
   }
 ]

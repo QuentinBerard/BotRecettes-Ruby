@@ -142,14 +142,14 @@
     {
     "recipe_id": 6,
     "recipe_type": "Dessert",
-    "recipe_name": "Tiramisù",
+    "recipe_name": "Tiramisu",
     "ingredients": {
       "Mascarpone": "400 g",
       "Cacao en poudre": "50 g",
       "Oeuf": "5",
       "Sucre": "150 g",
       "Biscuits cuillières":"36",
-      "Sucre Vanillé":"1 sachet",
+      "Sucre vanillé":"1 sachet",
       "Café":"100g"
     },
     "allergens": [],
